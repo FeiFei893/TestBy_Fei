@@ -2,7 +2,9 @@
 set -u
 
 # First check if the OS is Linux.
-
+if [[ "$(uname)" = "Linux" ]]; then
+  HOMEBREW_ON_LINUX=1
+fi
 
 # On macOS, this script installs to /usr/local only.
 # On Linux, it installs to /home/linuxbrew/.linuxbrew if you have sudo access
